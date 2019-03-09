@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Troy Wynn's Portfolio</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="assets/vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="assets/css/grayscale.css" rel="stylesheet">
+
+</head>
+
+<style>
+  #built-with-text {
+    font-size: 20px;
+  }
+  
+  .readme-text {
+    font-size: 24px;
+  }
+
+
+  #introduction {
+    border-radius: 5%;
+  }
+
+  @media (max-width: 992px) {
+
+  #introduction {
+   margin-top: 2rem;
+  }
+}
+
+</style>
+
+<body id="page-top">
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand js-scroll-trigger" href="#page-top">Troy Wynn</a>
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#projects">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Header -->
+  <header class="masthead">
+
+    <div id="about" class="container d-flex h-100 align-items-center">
+      <div class="row justify-content-center no-gutters mb-4 mb-lg-5 ">
+
+        <div class="col-lg-4 mx-auto text-center justify-content-center">
+          <img class="img-fluid d-block mx-auto my-0 pro-pic " src="assets/img/profile-picture.jpeg" alt="">
+          <!-- <h1 class="mx-auto my-0 text-uppercase">Grayscale</h1> -->
+          <!-- <h2 class="text-white-50 mx-auto mt-2 mb-5">A free, responsive, one page Bootstrap theme created by Start Bootstrap.</h2> -->
+        </div>
+
+        <div id="introduction" class="col-lg-8 mx-auto p-5 mt-2-sm bg-dark">
+            <span class="text-white h-100">
+              Grayscale is a free Bootstrap theme created by Start Bootstrap. It can be yours right now, simply download the template on
+              <a href="http://startbootstrap.com/template-overviews/grayscale/">the preview page</a>. The theme is open source, and you can use it for any purpose, personal or commercial.
+            </span>
+        </div>
+        
+        <a href="#projects" class="d-block btn btn-primary js-scroll-trigger mt-4">Go To Portfolio <i class="fas fa-arrow-down text-black mb-2"></i></a>
+
+      </div>
+    </div>
+
+  </header>
+
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section bg-light">
+    <div class="container">
+
+      <h2 class="text-black mb-4">Portfolio</h2>
+      <!-- Featured Project Row -->
+      <!-- <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+        <div class="col-xl-8 col-lg-7">
+          <img class="img-fluid mb-3 mb-lg-0" src="img/bg-masthead.jpg" alt="">
+        </div>
+        <div class="col-xl-4 col-lg-5">
+          <div class="featured-text text-center text-lg-left">
+            <h4>Shoreline</h4>
+            <p class="text-black-50 mb-0">Grayscale is open source and MIT licensed. This means you can use it for any project - even commercial projects! Download it, customize it, and publish your website!</p>
+          </div>
+        </div>
+      </div> -->
+
+       <!-- Project Two Row -->
+    <div class="row justify-content-center no-gutters mb-4 mb-lg-5">
+        <div class="col-lg-6">
+              <a href ="https://exp-friend-finder-troy.herokuapp.com/"><img src="assets/img/friendfinder.jpg" class="img-fluid" alt="Responsive image"></a>
+        </div>
+        <div class="col-lg-6 order-lg-first">
+          <div class="bg-black text-center h-100 project">
+
+              <div id="carouselExampleIndicators-friendFinder" class="myCarousel carousel slide h-100" data-ride="carousel" data-interval="0">
+                  <div class="d-flex h-100"> 
+              
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <!-- <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> -->
+                  <!-- <li data-target="#carouselExampleIndicators" data-slide-to="3"></li> -->
+                </ol>  
+                <div class="carousel-inner h-100">
+                  <div class="carousel-item active ">
+                    <div class="project-text w-100 my-auto text-center text-md-left h-100">
+                      <h5 class="text-white">Friend Finder: Hunter x Hunter Edition</h5>
+                        <span id="readme-text" class="mb-0 text-white-50">This full-stack site will take in results from a user's 
+                          personality results, then compare their answers 
+                          with characters from the Japanese anime series, <i>Hunter x Hunter</i>, in addition previously stored users. The app will then display the name and 
+                          picture of the user with the best overall match.</span>
+                          <hr class="d-none d-lg-block mb-0 ml-0">
+                    </div>
+                  </div>
+                  <div class="carousel-item h-100 w-100">
+                      <div class="project-text w-100 my-auto mx-auto text-center text-md-left h-100">
+                          <h4 class="text-white">Built With:</h4>
+                            <span id="built-with-text" class="mb-0 text-white-50">
+                              <ul>
+                                <li> Javascript </li>
+                                <li> jQuery </li>
+                                <li> Node </li>
+                                <li> Express </li>
+                              </ul>
+                              </span>
+                              <hr class="d-none d-lg-block mb-0 ml-0">
+                              <br>
+                        </div>
+                  </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators-friendFinder" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators-friendFinder" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center no-gutters mb-4 mb-lg-5">
+        <div class="col-lg-6">
+            <div class="embed-responsive embed-responsive-1by1">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/VOV5euYnGiE" allowfullscreen></iframe>
+            </div>
+          </div>
+        <div class="col-lg-6 order-lg-first">
+          <div class="bg-black text-center h-100 project">
+
+              <div id="carouselExampleIndicators-bamazon" class="myCarousel carousel slide h-100" data-ride="carousel" data-interval="0">
+                  <div class="d-flex h-100"> 
+              
+                <ol class="carousel-indicators">
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <!-- <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> -->
+                  <!-- <li data-target="#carouselExampleIndicators" data-slide-to="3"></li> -->
+                </ol>
+                
+                
+                
+                <div class="carousel-inner h-100">
+                    <div class="carousel-item active">
+                      <div id="readme-text" class="project-text w-100 my-auto text-center text-md-left">
+                        <h4 class="text-white">Node Application #3: Bamazon Store Manager</h4>
+                          <span id="readme-text" class="mb-0 text-white-50">A CLI (Command-Line Interface) application with a "store-front" for customers and an inventory 
+                            management system for managers and supervisors to check inventory and store sales. As customers make purchases, the inventory management system 
+                            updates after each transaction.</span>
+                            <hr class="d-none d-lg-block mb-0 ml-0">
+                      </div>
+                    </div>
+                    <div class="carousel-item h-100 w-100">
+                      <div class="project-text w-100 my-auto mx-auto text-center text-md-left h-100">
+                          <h4 class="text-white">Built With:</h4>
+                            <span id="built-with-text" class="mb-0 text-white-50">
+                              <ul>
+                                <li> Javascript </li>
+                                <li> Node: Inquirer, Console.Table </li>
+                                <li> MySQL </li>
+                              </ul>
+                              </span>
+                              <hr class="d-none d-lg-block mb-0 ml-0">
+                              <br>
+                        </div>
+                  </div>
+                  <a class="carousel-control-prev" href="#carouselExampleIndicators-bamazon" role="button" data-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="carousel-control-next" href="#carouselExampleIndicators-bamazon" role="button" data-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="sr-only">Next</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="row justify-content-center no-gutters mb-4 mb-lg-5">
+          <div class="col-lg-6">
+              <div class="embed-responsive embed-responsive-1by1">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/uHvTAhPGXQo" allowfullscreen></iframe>
+              </div>
+            </div>
+          <div class="col-lg-6 order-lg-first">
+            <div class="bg-black text-center h-100 project">
+  
+                <div id="carouselExampleIndicators-nodeGuess" class="myCarousel carousel slide h-100" data-ride="carousel" data-interval="0">
+                    <div class="d-flex h-100"> 
+                
+                  <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <!-- <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> -->
+                    <!-- <li data-target="#carouselExampleIndicators" data-slide-to="3"></li> -->
+                  </ol>
+                  
+                  
+                  
+                  <div class="carousel-inner h-100">
+                      <div class="carousel-item active">
+                        <div class="project-text w-100 my-auto text-center text-md-left">
+                          <h4 class="text-white">Node Application #2 : "Guess That State!"</h4>
+                            <span class="mb-0 text-white-50">"Guess That State!" is a CLI (Command-Line Interface) Game that gives a user <i>X</i> amount of tries to guess the correct word. 
+                                For this edition, the words to be guessed are the 50 United States of America, which will be chosen at random during each game. 
+                                When the user runs out of remaining guesses or when the user 
+                                correctly guesses the word, he/she will be asked whether or not they would like to play again.</span>
+                              <hr class="d-none d-lg-block mb-0 ml-0">
+                        </div>
+                      </div>
+                      <div class="carousel-item h-100 w-100">
+                        <div class="project-text w-100 my-auto mx-auto text-center text-md-left h-100">
+                            <h4 class="text-white">Built With:</h4>
+                              <span id="readme-text" id="built-with-text" class="mb-0 text-white-50">
+                                <ul>
+                                  <li> Javascript </li>
+                                  <li> Node: Inquirer </li>
+                                </ul>
+                                </span>
+                                <hr class="d-none d-lg-block mb-0 ml-0">
+                                <br>
+                          </div>
+                    </div>
+                      <a class="carousel-control-prev" href="#carouselExampleIndicators-nodeGuess" role="button" data-slide="prev">
+                          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next" href="#carouselExampleIndicators-nodeGuess" role="button" data-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="row justify-content-center no-gutters mb-4 mb-lg-5">
+            <div class="col-lg-6">
+              <div class="embed-responsive embed-responsive-1by1">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/qTel5a3QzQA" allowfullscreen></iframe>
+              </div>
+            </div>
+            <div class="col-lg-6 order-lg-first">
+              <div class="bg-black text-center h-100 project">
+                  <div class="d-flex h-100">
+
+                  <div id="carouselExampleIndicators-liri" class="myCarousel carousel slide" data-ride="carousel" data-interval="0">
+                    <ol class="carousel-indicators">
+                      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                      <!-- <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> -->
+                      <!-- <li data-target="#carouselExampleIndicators" data-slide-to="3"></li> -->
+                    </ol>
+                    <div class="carousel-inner h-100 ">
+                      <div class="carousel-item active">
+                        <div class="project-text w-100 my-auto text-center text-md-left">
+                            <h4 class="text-white">Node Application #1: Liri Bot</h4>
+                            <span id="readme-text" class="mb-0 text-white-50">LIRI is a Language Interpretation and Recognition Interface built with
+                                      LIRI will be a command line node app that takes in parameters and gives you back data. 
+                                        It retrieves and returns data via various API calls.</span>
+                            <hr class="d-none d-lg-block mb-0 ml-0">
+                        </div>
+                      </div>
+                      <div class="carousel-item h-100 w-100">
+                        <div class="project-text w-100 my-auto mx-auto text-center text-md-left h-100">
+                            <h4 class="text-white">Built With:</h4>
+                              <span id="built-with-text" class="mb-0 text-white-50">
+                                <ul>
+                                  <li> Javascript </li>
+                                  <li> Node: Axios, Dotenv, Moment, Node-Spotify-Api </li>
+                                </ul>
+                                </span>
+                                <hr class="d-none d-lg-block mb-0 ml-0">
+                                <br>
+                          </div>
+                    </div>
+                      <a class="carousel-control-prev " href="#carouselExampleIndicators-liri" role="button" data-slide="prev">
+                          <span class="carousel-control-prev-icon align-left" aria-hidden="true"></span>
+                          <span class="sr-only">Previous</span>
+                      </a>
+                      <a class="carousel-control-next align-middle" href="#carouselExampleIndicators-liri" role="button" data-slide="next">
+                          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                          <span class="sr-only">Next</span>
+                      </a>
+                    </div>
+                  </div> 
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>
+      
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section bg-black ">
+    <div class="container">
+
+      <div class="row justify-content-center mb-4">
+
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-envelope text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Email</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">
+                <a href="#">troynwynn@gmail.com</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+            <div class="card-body text-center">
+              <i class="fas fa-mobile-alt text-primary mb-2"></i>
+              <h4 class="text-uppercase m-0">Phone</h4>
+              <hr class="my-4">
+              <div class="small text-black-50">267-230-8394</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <a href="#projects" class="btn btn-primary js-scroll-trigger">Go To Portfolio <i class="fas fa-arrow-down text-black mb-2"></i></a> -->
+      <div class="row justify-content-center ">
+        <a href="files/TroyWynn-UPenn-Resume.pdf" class="justify-content-center btn btn-primary p-4 my-4">Download Resume <i class="fas fa-file-import text-black mb-2"></i></a>
+      </div>
+      
+
+
+      <div class="social fab d-flex justify-content-center mt-4">
+        <a href="https://www.linkedin.com/in/troy-wynn-b8940361/" class="mx-2">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/troynwynn" class="mx-2">
+          <i class="fab fa-github"></i>
+        </a>
+        <!-- <a href="../files/TroyWynn-UPenn-Resume.pdf" class="mx-2">
+          <i class="fas fa-file-import"></i>
+        </a> -->
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black small text-center text-white-50">
+    <div class="container">
+      <!-- Copyright &copy; -->
+    </div>
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="assets/vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="assets/js/grayscale.min.js"></script>
+
+</body>
+
+</html>

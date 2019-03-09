@@ -1,0 +1,37 @@
+.carousel-item{
+  height: 200px;
+  width: 200px;
+} 
+.carousel-item img{
+  height: 200px;
+  width:200px;
+  
+}
+#background{
+  background-image: url("https://i.stack.imgur.com/Q33C1.gif");
+  height: 100vh;
+  /* url("https://images.pexels.com/photos/16516/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")  */
+}
+.font1{
+  font-family: "Bangers", "cursive";
+}
+.trophy-closet{
+  background-image: url("https://www.livbc.com/uploads/2/3/6/2/23627006/2170530_orig.png");
+  height: 100vh;
+}
+.funko-image{
+  height: 100px;
+  margin:95%;
+  padding:10%;
+  z-index: -3;
+}
+.blinking{
+  animation:blinkingText 6s infinite;
+}
+@keyframes blinkingText{
+  0%{     color:transparent; }
+  49%{    color:red; text-shadow: 2px 2px 8px rgb(241, 234, 234); }
+  50%{    color: transparent; }
+  99%{    color:red;  }
+  100%{   color:red;text-shadow: 2px 2px 8px rgb(241, 234, 234); }
+}
