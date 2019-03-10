@@ -300,16 +300,17 @@
             </div>
             <div class="col-md-8">
                     <div class="wrapper" ondragover="allowDrop(event)" ondrop="drop(event)">             
-                        <img id="background" src="https://www.wallpapers.net/web/wallpapers/avengers-infinity-war-artwork-full-hd-wallpaper-for-desktop-mobiles/1080x1920.jpg" style="height:900px; width:800px;" alt="background">
-                        <img data-part="head" class="wearing wearing1" src="images/hhead.png" alt="head" hidden>
-                        <img data-part="torso" class="wearing wearing2" src="images/hbody.png" alt="torso" hidden>
-                        <img data-part="legs" class="wearing wearing3" src="images/hlegs.png" alt="legs" hidden>
+                        <img id="activeBackground" src="https://www.wallpapers.net/web/wallpapers/avengers-infinity-war-artwork-full-hd-wallpaper-for-desktop-mobiles/1080x1920.jpg" style="height:900px; width:800px;" alt="background">
                     </div>   
+                    <input class="btn btn-primary state headBtn" type="submit" value="Head">
+                    <input class="btn btn-primary state bodyBtn" type="submit" value="Body">
+                    <input class="btn btn-primary state legsBtn" type="submit" value="Legs">
             </div>
         </div>
+        
     </div>
     </body>
     <script src="/js/jquery.js"></script>
-    <script src="/js/jquery-ui.js"></script>
+    <script src="/js/jquery_ui_fr.js"></script>
     <script src="/js/app.js"></script>
 </html>
