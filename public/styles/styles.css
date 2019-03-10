@@ -5,12 +5,10 @@
 .carousel-item img{
   height: 200px;
   width:200px;
-  
 }
 #background{
   background-image: url("https://i.stack.imgur.com/Q33C1.gif");
   height: 100vh;
-  /* url("https://images.pexels.com/photos/16516/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260")  */
 }
 .font1{
   font-family: "Bangers", "cursive";
@@ -24,6 +22,15 @@
   margin:95%;
   padding:10%;
   z-index: -3;
+}
+.headBtn,
+.bodyBtn,
+.legsBtn{
+  z-index: 10;
+}
+.state{
+  color: #c04c0e;
+  background-color: #e2b90e;
 }
 .blinking{
   animation:blinkingText 6s infinite;

@@ -23,22 +23,16 @@ function allowDrop(ev) {
 // This function on drag clears then sets our variables
 function drag(ev) {
   part = null;
+  limbs = null;
   droppedItem = null;
   activeItem = null;
-  limbs = null;
+  currentScr = null;
+  
   part = ev.target.dataset.part;
   limbs = ev.target.dataset.limb;
-  // this shows the source location of dragable items
   droppedItem = ev.target;
   activeItem = ev.target.id;
-  // write logic including limbs for on drop function
-  // if(limbs === "head"){
-  //   myFunko.head = ev.srcElement.src
-  // } else if(limbs === "torso"){
-  //   myFunko.torso = ev.srcElement.src
-  // } else if(limbs === "legs"){
-  //   myFunko.legs = ev.srcElement.src
-  // }
+  // console.log(ev);
 }
 
 // This function uses the "data-type" to grab the class name of the image,
@@ -48,20 +42,51 @@ function drop(ev) {
   ev.preventDefault();
   if(limbs === "head"){
     document.querySelector("." + part)
-    .style = "position:fixed; top:0; height:700px; width:700px;";
+    .style = "position:fixed; top:0; height:900px; width:900px;";
+    document.querySelector(".wrapper").append(droppedItem);
+    myFunko.head = droppedItem.src;
+    $("#" + activeItem).draggable(); 
   } else if (limbs === "torso") {
     document.querySelector("." + part)
-    .style = "position:fixed; top:200px; height:700px; width:700px;";
+    .style = "position:fixed; top:200px; height:900px; width:900px;";
+    document.querySelector(".wrapper").append(droppedItem);
+    myFunko.torso = droppedItem.src;
+    $("#" + activeItem).draggable(); 
   } else if(limbs === "legs"){
     document.querySelector("." + part)
-    .style = "position:fixed; top:400px; height:700px; width:700px;";
+    .style = "position:fixed; top:400px; height:900px; width:900px;";
+    document.querySelector(".wrapper").append(droppedItem);
+    myFunko.legs = droppedItem.src;
+    $("#" + activeItem).draggable(); 
+  } else if(limbs === "background"){
+    $("#activeBackground").attr("src", droppedItem.src)
   }
-
-  document.querySelector(".wrapper")
-    .append(droppedItem);
-  $("#" + activeItem).draggable();  
-  console.log(myFunko);
-  console.log(ev);
+  // console.log(droppedItem);
+  // console.log(myFunko);
+  // console.log(ev);
 }
 
-// They all need uniqe "data-parts" and a uniqe "ids" to work
+// Targets the head so we can move the head only
+$(document).on("click", ".headBtn", function(){
+  $(".head").css('z-index', 3);
+  $(".torso, .legs").css('z-index', 2);
+  $(".torso, .legs").draggable({
+    disabled: true
+  })
+});
+// Targets the body so we can move the body only
+$(document).on("click", ".bodyBtn", function(){
+  $(".torso").css('z-index', 3);
+  $(".head, .legs").css('z-index', 2);
+  $(".head, .legs").draggable({
+    disabled: true
+  })
+});
+// Targets the legs so we can move the legs only
+$(document).on("click", ".legsBtn", function(){
+  $(".legs").css('z-index', 3);
+  $(".torso, .head").css('z-index', 2);
+  $(".torso, .head").draggable({
+    disabled: true
+  })
+});
