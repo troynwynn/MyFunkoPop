@@ -25,7 +25,8 @@
 }
 .headBtn,
 .bodyBtn,
-.legsBtn{
+.legsBtn,
+.matchBtn{
   z-index: 10;
 }
 .state{
