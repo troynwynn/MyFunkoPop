@@ -31,7 +31,9 @@
 .bodyBtn,
 .legsBtn,
 .btn-danger,
-.matchBtn{
+.matchBtn,
+.nav-link,
+.navbar-brand{
   z-index: 10;
   position: relative;
 }
