@@ -13,6 +13,10 @@
 .font1{
   font-family: "Bangers", "cursive";
 }
+.font2{
+  font-size: 25px;
+  font-family: "Bangers", "cursive";
+}
 .trophy-closet{
   background-image: url("https://www.livbc.com/uploads/2/3/6/2/23627006/2170530_orig.png");
   height: 100vh;

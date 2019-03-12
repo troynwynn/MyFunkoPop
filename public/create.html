@@ -7,30 +7,31 @@
         <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIgD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAEREBAAABAAAQAQEAAAEAABABAQAAAREQEAEBERABABAQAQEAEAEAEBABAQAQAQAQEAEBABABERAREQEREAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AAD//wAAeF8AAHtfAAB7XwAAC0MAAGtbAABrWwAAa1sAAAhDAAD//wAA//8AAP//AAD//wAA" rel="icon" type="image/x-icon"> 
         <title>Design Your Funko Pop</title>
     </head>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <a class="navbar-brand font1 blinking" style="font-size: 45px; color:red;" href="index.html"><span style="color: rgb(250, 221, 221); text-shadow: 2px 2px 8px #FF0000;">My Funko</span> Pop</a>
+        <a class="navbar-brand font1 blinking" style="font-size: 45px; color:red;" href="create.html"><span style="color: rgb(250, 221, 221); text-shadow: 2px 2px 8px #FF0000;">My Funko</span> Pop</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link" href="trophy-room.html">Trophy Room</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="trades.html">Trades</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="sign-in.html">Sign-In</a>
+                    <a class="nav-link font2" href="trophy-room.html">Trophy Room</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="/api/users">Users</a>
+                    <a class="nav-link font2" href="trades.html">Trades</a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="/logout">Logout</a>
+                    <a class="nav-link font2" href="login.html">Sign-In</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link font2" href="/api/users">Users</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link font2" href="/logout">Logout</a>
                 </li>
             </ul>
         </div>
@@ -57,15 +58,15 @@
                             <li data-target="#headCarousel" data-slide-to="10"></li>
                             <li data-target="#headCarousel" data-slide-to="11"></li>
                             <li data-target="#headCarousel" data-slide-to="12"></li>
-                            <li data-target="#headCarousel" data-slide-to="13"></li>
-                            <li data-target="#headCarousel" data-slide-to="14"></li>
+                            <!-- <li data-target="#headCarousel" data-slide-to="13"></li>
+                            <li data-target="#headCarousel" data-slide-to="14"></li> -->
                             
                             </ol>
                             <div class="carousel-inner" data-interval="false">
-                            <div class="carousel-item active head1"  style="background-color: gray">
+                            <!-- <div class="carousel-item active head1"  style="background-color: gray">
                                 <img data-part="BPantherHead" data-character="BPanther" data-limb="head" id="head1" src="/images/Funko-Pop/BlackPanther/BPantherHead.png" class="d-block BPantherHead head" alt="head" draggable="true" ondragstart="drag(event)">
-                            </div>
-                            <div class="carousel-item head2" style="background-color: gray">
+                            </div> -->
+                            <div class="carousel-item active head2" style="background-color: gray">
                                 <img data-part="BlackWidowHead" data-character="BlackWidow" data-limb="head" id="head2" src="/images/Funko-Pop/BlackWidow/BlackWidowHead.png" class="d-block BlackWidowHead head" alt="head" draggable="true" ondragstart="drag(event)">
                             </div>
                             <div class="carousel-item head3" style="background-color: gray">
@@ -98,9 +99,9 @@
                             <div class="carousel-item head12" style="background-color: gray">
                                 <img data-part="TeenGrootHead" data-character="TeenGroot" data-limb="head" id="head12" src="/images/Funko-Pop/TeenGroot/TeenGrootHead.png" class="d-block TeenGrootHead head" alt="head" draggable="true" ondragstart="drag(event)">
                             </div>
-                            <div class="carousel-item head13" style="background-color: gray">
+                            <!-- <div class="carousel-item head13" style="background-color: gray">
                                 <img data-part="ThanosHead" data-character="Thanos" data-limb="head "id="head13" src="/images/Funko-Pop/Thanos/ThanosHead.png" class="d-block ThanosHead head" alt="head" draggable="true" ondragstart="drag(event)">
-                            </div>
+                            </div> -->
                             <div class="carousel-item head14" style="background-color: gray">
                                 <img data-part="ThorHead" data-character="Thor" data-limb="head" id="head14" src="/images/Funko-Pop/Thor/ThorHead.png" class="d-block ThorHead head" alt="head" draggable="true" ondragstart="drag(event)">
                             </div>
@@ -133,14 +134,14 @@
                             <li data-target="#bodyCarousel" data-slide-to="10"></li>
                             <li data-target="#bodyCarousel" data-slide-to="11"></li>
                             <li data-target="#legsCarousel" data-slide-to="12"></li>
-                            <li data-target="#bodyCarousel" data-slide-to="13"></li>
-                            <li data-target="#bodyCarousel" data-slide-to="14"></li>
+                            <!-- <li data-target="#bodyCarousel" data-slide-to="13"></li>
+                            <li data-target="#bodyCarousel" data-slide-to="14"></li> -->
                             </ol>
                             <div class="carousel-inner">
-                            <div class="carousel-item active torso1" style="background-color: gray">
+                            <!-- <div class="carousel-item active torso1" style="background-color: gray">
                                 <img data-part="BPantherBody" data-character="BPanther" data-limb="torso "id="torso1" src="/images/Funko-Pop/BlackPanther/BPantherBody.png" class="d-block BPantherBody torso" alt="torso" draggable="true" ondragstart="drag(event)">
-                            </div>
-                            <div class="carousel-item torso2" style="background-color: gray">
+                            </div> -->
+                            <div class="carousel-item active torso2" style="background-color: gray">
                                 <img data-part="BlackWidowBody" data-character="BlackWidow" data-limb="torso" id="torso2" src="/images/Funko-Pop/BlackWidow/BlackWidowBody.png" class="d-block BlackWidowBody torso" alt="torso" draggable="true" ondragstart="drag(event)">
                             </div>
                             <div class="carousel-item torso3" style="background-color: gray">
@@ -173,9 +174,9 @@
                             <div class="carousel-item torso12" style="background-color: gray">
                                 <img data-part="TeenGrootBody" data-character="TeenGroot" data-limb="torso" id="torso12" src="images/Funko-Pop/TeenGroot/TeenGrootBody.png" class="d-block TeenGrootBody torso" alt="torso" draggable="true" ondragstart="drag(event)">
                             </div>
-                            <div class="carousel-item torso13" style="background-color: gray">
+                            <!-- <div class="carousel-item torso13" style="background-color: gray">
                                 <img data-part="ThanosBody" data-character="Thanos" data-limb="torso" id="torso13" src="images/Funko-Pop/Thanos/ThanosBody.png" class="d-block ThanosBody torso" alt="torso" draggable="true" ondragstart="drag(event)">
-                            </div>
+                            </div> -->
                             <div class="carousel-item torso14" style="background-color: gray">
                                 <img data-part="ThorBody" data-character="Thor" data-limb="torso" id="torso14" src="images/Funko-Pop/Thor/ThorBody.png" class="d-block ThorBody torso" alt="torso" draggable="true" ondragstart="drag(event)">
                             </div>
@@ -208,14 +209,14 @@
                             <li data-target="#legsCarousel" data-slide-to="10"></li>
                             <li data-target="#legsCarousel" data-slide-to="11"></li>
                             <li data-target="#legsCarousel" data-slide-to="12"></li>
-                            <li data-target="#legsCarousel" data-slide-to="13"></li>
-                            <li data-target="#legsCarousel" data-slide-to="14"></li>
+                            <!-- <li data-target="#legsCarousel" data-slide-to="13"></li>
+                            <li data-target="#legsCarousel" data-slide-to="14"></li> -->
                             </ol>
                             <div class="carousel-inner" data-interval="false">
-                            <div class="carousel-item active legs1" style="background-color: gray">
+                            <!-- <div class="carousel-item active legs1" style="background-color: gray">
                                 <img data-part="BPantherLegs" data-character="BPanther" data-limb="legs" id="legs1" src="/images/Funko-Pop/BlackPanther/BPantherLegs.png" class="d-block BPantherLegs legs" alt="legs" draggable="true" ondragstart="drag(event)">
-                            </div>
-                            <div class="carousel-item legs2" style="background-color: gray">
+                            </div> -->
+                            <div class="carousel-item legs2 active" style="background-color: gray">
                                 <img data-part="BlackWidowLegs" data-character="BlackWidow" data-limb="legs" id="legs2" src="images/Funko-Pop/BlackWidow/BlackWidowLegs.png" class="d-block BlackWidowLegs legs" alt="legs" draggable="true" ondragstart="drag(event)">
                             </div>
                             <div class="carousel-item legs3" style="background-color: gray">
@@ -242,9 +243,9 @@
                             <div class="carousel-item legs10" style="background-color: gray">
                                 <img data-part="TeenGrootLegs" data-character="TeenGroot" data-limb="legs" id="legs10" src="images/Funko-Pop/TeenGroot/TeenGrootLegs.png" class="d-block TeenGrootLegs legs" alt="legs" draggable="true" ondragstart="drag(event)">
                             </div>
-                            <div class="carousel-item legs11" style="background-color: gray">
+                            <!-- <div class="carousel-item legs11" style="background-color: gray">
                                 <img data-part="ThanosLegs" data-character="Thanos" data-limb="legs" id="legs11" src="images/Funko-Pop/Thanos/ThanosLegs.png" class="d-block ThanosLegs legs" alt="legs" draggable="true" ondragstart="drag(event)">
-                            </div>
+                            </div> -->
                             <div class="carousel-item legs12" style="background-color: gray">
                                 <img data-part="ThorLegs" data-character="Thor" data-limb="legs" id="legs12" src="images/Funko-Pop/Thor/ThorLegs.png" class="d-block ThorLegs legs" alt="legs" draggable="true" ondragstart="drag(event)">
                             </div>
