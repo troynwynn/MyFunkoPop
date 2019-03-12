@@ -171,13 +171,25 @@ $(document).on("click", ".matchBtn", function(){
       $confetti.hide(); 
     }, 7000)
   }
+  bobbleL();
+  bobbleR();
+  setTimeout(function(){
+    clearInterval(bobbleL);
+    }, 7000)
+  setTimeout(function(){
+    clearInterval(bobbleR);
+    }, 7000)
+});
 
+function bobbleL() {
   setInterval(function(){
     $(".head").css("transition", "ease 1s")
     $(".head").css("transform", "translate(-30px, 0px)")
   }, 400);
+}  
+function bobbleR() {
   setInterval(function(){
     $(".head").css("transition", "ease 1s")
     $(".head").css("transform", "translate(30px, 0px)")
   }, 800);
-});
+}
