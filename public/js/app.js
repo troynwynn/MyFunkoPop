@@ -162,7 +162,7 @@ $confetti.get(0).pause();
 // Chacks if all parts match
 $(document).on("click", ".matchBtn", function(){
   if((active.headCharacter === active.torsoCharacter) 
-  && (active.torsoCharacter === active.legsCharacter) || (true)){
+  && (active.torsoCharacter === active.legsCharacter)){
     $(".head").css("z-index", 3)
     console.log("You Won");
     $confetti.show();
