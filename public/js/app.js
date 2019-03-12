@@ -60,6 +60,7 @@ function drop(ev) {
     document.querySelector("." + part)
     .style = "position:fixed; top:0; height:900px; width:900px;";
     document.querySelector(".wrapper").append(droppedItem);
+    $(".head").draggable({ disabled: false });
     myFunko.head = droppedItem.src;
     active.head = droppedItem;
     active.headID = activeItem;
@@ -69,6 +70,7 @@ function drop(ev) {
     document.querySelector("." + part)
     .style = "position: fixed; top:200px; height:900px; width:900px;";
     document.querySelector(".wrapper").append(droppedItem);
+    $(".torso").draggable({ disabled: false });
     myFunko.torso = droppedItem.src;
     active.torso = droppedItem;
     active.torsoID = activeItem;
@@ -78,6 +80,7 @@ function drop(ev) {
     document.querySelector("." + part)
     .style = "position:fixed; top:400px; height:900px; width:900px;";
     document.querySelector(".wrapper").append(droppedItem);
+    $(".legs").draggable({ disabled: false });
     myFunko.legs = droppedItem.src;
     active.legs = droppedItem;
     active.legsID = activeItem;
@@ -120,30 +123,41 @@ $(document).on("click", ".legsBtn", function(){
 });
 // Removes the chosen head
 $(document).on("click", ".removeHead", function(){
-  $("#" + active.headID).hide();
-  // $("#" + active.headID).css("height", 200);
-  // $("#" + active.headID).css("width", 200);
-  // $("." + active.headID).append(active.head);
+  $(".head").draggable({ disabled: true })
+  $("#" + active.headID).css("height", 200);
+  $("#" + active.headID).css("width", 200);
+  $("#" + active.headID).css("top", "auto");
+  $("#" + active.headID).css("left", "auto");
+  $("#" + active.headID).css("z-index", 1);
+  $("#" + active.headID).css("position", "relative");
+  $("." + active.headID).append(active.head);
 });
 // Removes the chosen body
 $(document).on("click", ".removeBody", function(){
-  $("#" + active.torsoID).hide();
-  // $("#" + active.torsoID).css("height", 200);
-  // $("#" + active.torsoID).css("width", 200);
-  // $("." + active.torsoID).append(active.torso);
+  $(".torso").draggable({ disabled: true })
+  $("#" + active.torsoID).css("height", 200);
+  $("#" + active.torsoID).css("width", 200);
+  $("#" + active.torsoID).css("top", "auto");
+  $("#" + active.torsoID).css("left", "auto");
+  $("#" + active.torsoID).css("z-index", 1);
+  $("#" + active.torsoID).css("position", "relative");
+  $("." + active.torsoID).append(active.torso);
 });
 // Removes the chosen legs 
 $(document).on("click", ".removeLegs", function(){
-  $("#" + active.legsID).hide();
-  // $("#" + active.legsID).css("height", 200);
-  // $("#" + active.legsID).css("width", 200);
-  // $("." + active.legsID).append(active.legs);  
+  $(".legs").draggable({ disabled: true })
+  $("#" + active.legsID).css("height", 200);
+  $("#" + active.legsID).css("width", 200);
+  $("#" + active.legsID).css("top", "auto");
+  $("#" + active.legsID).css("left", "auto");
+  $("#" + active.legsID).css("z-index", 1);
+  $("#" + active.legsID).css("position", "relative");
+  $("." + active.legsID).append(active.legs); 
 });
 // Chacks if all parts match
 $(document).on("click", ".matchBtn", function(){
   if((active.headCharacter === active.torsoCharacter) 
   && (active.torsoCharacter === active.legsCharacter)){
     console.log("You Won");
-    
   }
 });
