@@ -171,13 +171,17 @@ $(document).on("click", ".matchBtn", function(){
       $confetti.hide(); 
     }, 7000)
   }
-
-  setInterval(function(){
+  
+  let bobbleL = setInterval(function(){
     $(".head").css("transition", "ease 1s")
     $(".head").css("transform", "translate(-30px, 0px)")
   }, 400);
-  setInterval(function(){
+  let bobbleR = setInterval(function(){
     $(".head").css("transition", "ease 1s")
     $(".head").css("transform", "translate(30px, 0px)")
   }, 800);
+
+  setTimeout(function(){clearInterval(bobbleL);
+    clearInterval(bobbleR);
+  }, 7000 )
 });
