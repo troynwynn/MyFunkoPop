@@ -5,6 +5,7 @@
   <title>Sign Up</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/styles.css" media="screen" title="no title" charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
@@ -14,7 +15,7 @@
     <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIgD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAEREBAAABAAAQAQEAAAEAABABAQAAAREQEAEBERABABAQAQEAEAEAEBABAQAQAQAQEAEBABABERAREQEREAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AAD//wAAeF8AAHtfAAB7XwAAC0MAAGtbAABrWwAAa1sAAAhDAAD//wAA//8AAP//AAD//wAA" rel="icon" type="image/x-icon"> 
 </head>
 
-
+<body id="background">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand font1 blinking" style="font-size: 45px; color:red;" href="signup.html"><span style="color: rgb(250, 221, 221); text-shadow: 2px 2px 8px #FF0000;">My Funko</span> Pop</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -25,42 +26,37 @@
           <li class="nav-item active">
               <a class="nav-link font2" href="login.html">Sign-In</a>
           </li>
-          <li class="nav-item active">
-              <a class="nav-link font2" href="/logout">Logout</a>
-          </li>
       </ul>
     </div>
     
   </nav>
 <br>
-<body id="background">
-  <div class="container" >
+
+  <div class="container">
     <div class="row">
-    <div class="card border-danger col-md-12">
-      <div class="card-body">
-          <div class="card-header"><h2>Sign-Up</h2></div>
-              <div class="card-body text-danger">
-              <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="email-input" placeholder="Email">
-              </div>
-              <div class="form-group">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="password-input" placeholder="Password">
-              </div>
-              <div style="display: none" id="alert" class="alert alert-danger" role="alert">
-                <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-                <span class="sr-only">Error:</span> <span class="msg"></span>
-              </div>
-              <button type="submit" class="btn btn-info">Sign Up</button>
-            </form>
-            <br />
-            <p>Or Sign-In <a href="/login.html">here</a></p>
+      <div class="card border-danger col-md-6 col-md-offset-3">
+        <h2>Sign Up Form</h2>
+        <form class="signup">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="email-input" placeholder="Email">
           </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="password-input" placeholder="Password">
+          </div>
+          <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span class="sr-only">Error:</span> <span class="msg"></span>
+          </div>
+          <button type="submit" class="btn btn-default">Sign Up</button>
+        </form>
+        <br />
+        <p>Or log in <a href="/login">here</a></p>
       </div>
     </div>
-    </div>
   </div>
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/signup.js"></script>
