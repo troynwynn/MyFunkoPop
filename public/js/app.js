@@ -154,10 +154,30 @@ $(document).on("click", ".removeLegs", function(){
   $("#" + active.legsID).css("position", "relative");
   $("." + active.legsID).append(active.legs); 
 });
+
+// Winning conditions
+const $confetti = $("#confetti");
+$confetti.hide();
+$confetti.get(0).pause();
 // Chacks if all parts match
 $(document).on("click", ".matchBtn", function(){
   if((active.headCharacter === active.torsoCharacter) 
   && (active.torsoCharacter === active.legsCharacter)){
+    $(".head").css("z-index", 3)
     console.log("You Won");
+    $confetti.show();
+    $confetti.get(0).play();
+    setTimeout(function(){ $confetti.get(0).pause();
+      $confetti.hide(); 
+    }, 7000)
   }
+
+  setInterval(function(){
+    $(".head").css("transition", "ease 1s")
+    $(".head").css("transform", "translate(-30px, 0px)")
+  }, 400);
+  setInterval(function(){
+    $(".head").css("transition", "ease 1s")
+    $(".head").css("transform", "translate(30px, 0px)")
+  }, 800);
 });
