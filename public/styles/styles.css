@@ -30,8 +30,10 @@
 .headBtn,
 .bodyBtn,
 .legsBtn,
+.btn-danger,
 .matchBtn{
   z-index: 10;
+  position: relative;
 }
 .state{
   color: #c04c0e;

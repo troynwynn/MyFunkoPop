@@ -96,30 +96,30 @@ function drop(ev) {
 
 // Targets the head so we can move the head only
 $(document).on("click", ".headBtn", function(){
-  $(".head").draggable({ disabled: false });
+  // $(".head").draggable({ disabled: false });
   $(".head").css('z-index', 3);
   $(".torso, .legs").css('z-index', 2);
-  $(".torso, .legs").draggable({
-    disabled: true
-  });
+  // $(".torso, .legs").draggable({
+  //   disabled: true
+  // });
 });
 // Targets the body so we can move the body only
 $(document).on("click", ".bodyBtn", function(){
-  $(".torso").draggable({ disabled: false });
+  // $(".torso").draggable({ disabled: false });
   $(".torso").css('z-index', 3);
   $(".head, .legs").css('z-index', 2);
-  $(".head, .legs").draggable({
-    disabled: true
-  })
+  // $(".head, .legs").draggable({
+  //   disabled: true
+  // })
 });
 // Targets the legs so we can move the legs only
 $(document).on("click", ".legsBtn", function(){
-  $(".legs").draggable({ disabled: false });
+  // $(".legs").draggable({ disabled: false });
   $(".legs").css('z-index', 3);
   $(".torso, .head").css('z-index', 2);
-  $(".torso, .head").draggable({
-    disabled: true
-  })
+  // $(".torso, .head").draggable({
+  //   disabled: true
+  // })
 });
 // Removes the chosen head
 $(document).on("click", ".removeHead", function(){
@@ -183,5 +183,7 @@ $(document).on("click", ".matchBtn", function(){
 
   setTimeout(function(){clearInterval(bobbleL);
     clearInterval(bobbleR);
+    $(".head").css("transition", "ease 0s")
+    $(".head").css("transform", "translate( 0px, 0px)")
   }, 7000 )
 });
