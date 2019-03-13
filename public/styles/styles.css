@@ -60,3 +60,13 @@
   min-width: 100%; 
   min-height: 100%;
 }
+.avatar {
+  vertical-align: middle;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border: 2px solid white;
+  margin-left: 10px;
+  margin-right: 5px;
+
+}
