@@ -21,13 +21,13 @@ module.exports = function (app){
   });
 
   // RECENTLY ADDED SECURITY.HTML
-  app.get("/security", function(req, res) {
-    // If the user already has an account send them to the members page
-    if (req.user) {
-      res.redirect("/create");
-    }
-    res.sendFile(path.join(__dirname, "../public/security.html"));
-  });
+  // app.get("/security", function(req, res) {
+  //   // If the user already has an account send them to the members page
+  //   if (req.user) {
+  //     res.redirect("/create");
+  //   }
+  //   res.sendFile(path.join(__dirname, "../public/security.html"));
+  // });
 
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
@@ -35,7 +35,7 @@ module.exports = function (app){
     res.sendFile(path.join(__dirname, "../public/create.html"));
   });
 
-  app.get("/users", function(req, res) {
+  app.get("/users", isAuthenticated, function(req, res) {
     res.sendFile(path.join(__dirname, "../public/users.html"));
   });
 
