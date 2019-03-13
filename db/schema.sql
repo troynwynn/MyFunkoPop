@@ -17,6 +17,7 @@ CREATE TABLE Users (
     email varchar(255) NOT NULL,
     CONSTRAINT Email UNIQUE(email),
 	password varchar(255) NOT NULL,
+    avi varchar(255) NOT NULL,
 	PRIMARY KEY (id)
 );
 

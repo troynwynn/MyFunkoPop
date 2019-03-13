@@ -19,10 +19,10 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false
     },
-    // avatar: {
-    //   type: DataTypes.STRING,
-    //   allowNull: false
-    // },
+    avi: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
   }, {
       timestamps: false
   });

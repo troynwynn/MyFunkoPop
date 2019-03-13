@@ -12,7 +12,13 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIgD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAEREBAAABAAAQAQEAAAEAABABAQAAAREQEAEBERABABAQAQEAEAEAEBABAQAQAQAQEAEBABABERAREQEREAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AAD//wAAeF8AAHtfAAB7XwAAC0MAAGtbAABrWwAAa1sAAAhDAAD//wAA//8AAP//AAD//wAA" rel="icon" type="image/x-icon"> 
+    <link href="data:image/x-icon;base64,AAABAAEAEBAQAAEABAAoAQAAFgAAACgAAAAQAAAAIAAAAAEABAAAAAAAgAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAIgD/AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAEREBAAABAAAQAQEAAAEAABABAQAAAREQEAEBERABABAQAQEAEAEAEBABAQAQAQAQEAEBABABERAREQEREAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA//8AAP//AAD//wAAeF8AAHtfAAB7XwAAC0MAAGtbAABrWwAAa1sAAAhDAAD//wAA//8AAP//AAD//wAA" rel="icon" type="image/x-icon">
+    
+    <!-- Chosen -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
+
+    
 </head>
 
 <body id="background">
@@ -45,11 +51,18 @@
             <label for="exampleInputPassword1">Password</label>
             <input type="password" class="form-control" id="password-input" placeholder="Password">
           </div>
-          <div style="display: none" id="alert" class="alert alert-danger" role="alert">
-            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
-            <span class="sr-only">Error:</span> <span class="msg"></span>
-          </div>
-          <button type="submit" class="btn btn-default">Sign Up</button>
+          <h3><strong>Choose an Avatar</strong></h3>
+      <!-- <h4>People can rarely upset you.</h4> -->
+            <select class="chosen-select" id="character">
+                  <option value=""></option>
+                  <option value="1">Black Widow</option>
+                  <option value="2">Black Panther</option>
+                  <option value="3">Thanos</option>
+                  <option value="4">Thor</option>
+                  <option value="5">Bucky</option>
+                </select>
+            <hr>
+          <button id="submit" type="submit" class="btn btn-default">Sign Up</button>
         </form>
         <br />
         <p>Or log in <a href="/login">here</a></p>
@@ -58,8 +71,38 @@
   </div>
 
 
+  
+  <!-- <script type="text/javascript" src="js/security.js"></script> -->
+
+  <script type="text/javascript">
+  
+    // Chosen CSS
+    var config = {
+      ".chosen-select": {},
+      ".chosen-select-deselect": {
+        allow_single_deselect: true
+      },
+      ".chosen-select-no-single": {
+        disable_search_threshold: 10
+      },
+      ".chosen-select-no-results": {
+        no_results_text: "Oops, nothing found!"
+      },
+      ".chosen-select-width": {
+        width: "100%"
+      }
+    };
+
+
+    for (var selector in config) {
+      $(selector).chosen(config[selector]);
+    }
+
+  
+  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript" src="js/signup.js"></script>
+
 
 </body>
 

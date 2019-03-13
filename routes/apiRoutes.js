@@ -20,7 +20,8 @@ module.exports = function(app) {
     console.log(req.body);
     db.User.create({
       email: req.body.email,
-      password: req.body.password
+      password: req.body.password,
+      avi: req.body.avi
     }).then(function() {
       res.redirect(307, "/api/login");
     }).catch(function(err) {
@@ -47,7 +48,8 @@ module.exports = function(app) {
   });
 
   // Route for getting some data about our user to be used client side
-  app.get("/api/user_data", function(req, res) {
+  app.get("/api/signup", function(req, res) {
+    // console.log(req.user.avi);
     if (!req.user) {
       // The user is not logged in, send back an empty object
       res.json({});
@@ -57,16 +59,10 @@ module.exports = function(app) {
       // Sending back a password, even a hashed password, isn't a good idea
       res.json({
         email: req.user.email,
-        id: req.user.id
+        id: req.user.id,
+        avi: req.user.avi
       });
     }
-  });
-
-  app.get("/api/users/", function(req, res) {
-    db.User.findAll({})
-      .then(function(dbUser) {
-        res.json(dbUser);
-      });
   });
 
   app.delete("/api/users/:id", function(req, res) {
