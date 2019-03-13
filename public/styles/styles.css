@@ -22,10 +22,15 @@
   height: 100vh;
 }
 .funko-image{
-  height: 100px;
-  margin:95%;
-  padding:10%;
+  height: 250px;
+  width: 250px;
   z-index: -3;
+}
+.funko-buy{
+  visibility: hidden;
+}
+.trophy-row{
+  height: 200px;
 }
 .headBtn,
 .bodyBtn,
