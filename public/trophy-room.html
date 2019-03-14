@@ -1,70 +1,145 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link rel="stylesheet" href="styles/styles.css" media="screen" title="no title" charset="utf-8">
-        <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script> 
-        <title>Trophy Room</title>
-    </head>
 
-    <body id="background">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/styles.css" media="screen" title="no title" charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Bangers" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <title>Trophy Room</title>
+</head>
+
+<body id="background">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <a class="navbar-brand font1 blinking" style="font-size: 45px; color:red;" href="create.html"><span style="color: rgb(250, 221, 221); text-shadow: 2px 2px 8px #FF0000;">My Funko</span> Pop</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+        <a class="navbar-brand font1 blinking" style="font-size: 45px; color:red;" href="create.html"><span
+                style="color: rgb(250, 221, 221); text-shadow: 2px 2px 8px #FF0000;">My Funko</span> Pop</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item active my-auto">
-                        <a class="nav-link font2" href="trophy-room.html">Trophy Room</a>
-                    </li>
-                    <!-- <li class="nav-item active my-auto">
+                    <a class="nav-link font2" href="trophy-room.html">Trophy Room</a>
+                </li>
+                <!-- <li class="nav-item active my-auto">
                         <a class="nav-link font2" href="trades.html">Trades</a>
                     </li> -->
-                    <li class="nav-item active my-auto">
-                        <a class="nav-link font2" href="login.html">Sign-In</a>
-                    </li>
-                    <!-- <li class="nav-item active my-auto">
+                <li class="nav-item active my-auto">
+                    <a class="nav-link font2" href="login.html">Sign-In</a>
+                </li>
+                <!-- <li class="nav-item active my-auto">
                         <a class="nav-link font2" href="/api/users">Users</a>
                     </li> -->
-                    <li class="nav-item active my-auto">
-                        <a class="nav-link font2" href="/logout">Logout</a>
-                    </li>
+                <li class="nav-item active my-auto">
+                    <a class="nav-link font2" href="/logout">Logout</a>
+                </li>
                 <img src="" alt="Avatar" class="avatar" id="avi">
             </ul>
         </div>
     </nav>
-        <div class="container trophy-closet">
-            <div class="row trophy-row">
-                    <a href = "https://www.amazon.com/Funko-POP-Marvel-Avengers-Infinity/dp/B079PPFD5D/ref=sr_1_1?keywords=black+widow+funko+pop&qid=1552441077&s=gateway&sr=8-1" target = "blank" class ="funko-buy" data-character = "BlackWidow"><img src = "./images/Funko-Pop/BlackWidow/BlackWidowBox.png" class = "funko-image"></a>
-                    <a href = "https://www.amazon.com/Funko-POP-Marvel-Avengers-Infinity/dp/B07G4YYKG2/ref=sr_1_1?keywords=bucky+funko+pop&qid=1552441933&s=gateway&sr=8-1" target = "blank" class ="funko-buy" data-character = "Bucky"><img src = "./images/Funko-Pop/Bucky/BuckyBox.png" class = "funko-image"></a>
-                    <a href = "https://www.amazon.com/Funko-POP-Marvel-Avengers-Infinity/dp/B079PQ7TQS/ref=sr_1_1?keywords=captain+america+funko+pop&qid=1552442141&s=gateway&sr=8-1" target = "blank" class ="funko-buy" data-character = "CaptainAmerica"><img src = "./images/Funko-Pop/CaptainAmerica/CaptainAmericaBox.png" class = "funko-image"></a>
-                    <a href = "https://www.amazon.com/Funko-Pop-Marvel-Captain-Multicolor/dp/B07HB8C21N/ref=sr_1_2?keywords=captain+marvel+funko+pop&qid=1552442325&s=gateway&sr=8-2" target = "blank" class ="funko-buy" data-character = "CapMarvel"><img src = "./images/Funko-Pop/CaptainMarvel/CapMarvelBox.png" class = "funko-image"></a>
-            </div>
-            <div class="row trophy-row mt-5 mb-5">
-                    <a href = "https://www.amazon.com/Funko-Marvel-Strange-Bobblehaed-Figure/dp/B01JL8KELG/ref=sr_1_1?keywords=dr+strange+funko+pop&qid=1552442667&s=gateway&sr=8-1" target = "blank" class ="funko-buy" data-character = "DrStrange"><img src = "./images/Funko-Pop/DrStrange/DrSrangeBox.png" class = "funko-image"></a>
-                    <a href = "https://www.amazon.com/Pop-Marvel-Thor-Ragnarok-Masked/dp/B072Z2ZVZG/ref=sr_1_1?crid=3NYLY4XW9ZDDE&keywords=hela+funko+pop&qid=1552443041&s=gateway&sprefix=hela+funko%2Caps%2C139&sr=8-1" target = "blank" class ="funko-buy" data-caracter = "Hela"><img src = "./images/Funko-Pop/Hela/HelaBox.png" class = "funko-image"></a>
-                    <a href = "https://www.amazon.com/Funko-POP-Movies-Guardians-Galaxy/dp/B01M5KD8NL/ref=sr_1_1?keywords=starlord+funko+pop&qid=1552444686&s=gateway&sr=8-1" target = "blank" class ="funko-buy" data-character = "StarLord"><img src = "./images/Funko-Pop/StarLord/StarLordBox.png" class = "funko-image"></a>
-                    <a href = "https://www.amazon.com/Funko-POP-Marvel-Dancing-Bobble/dp/B00N1EJXUU/ref=sr_1_2?crid=12CN0RUAUZH24&keywords=groot+funko+pop&qid=1552443801&s=gateway&sprefix=groot+fu%2Caps%2C142&sr=8-2" target = "blank" class ="funko-buy" data-character = "SapGroot"><img src = "./images/Funko-Pop/SapGroot/SapGrootBox.png" class = "funko-image"></a>
-            </div>
-            <div class="row trophy-row mt-5">
-                    <a href = "https://www.amazon.com/Funko-Pop-Marvel-Panther-Collectible/dp/B07799VYN8/ref=sr_1_1?crid=FK702L2YO6JQ&keywords=shuri+funko+pop&qid=1552444586&s=gateway&sprefix=shuri+fu%2Caps%2C136&sr=8-1" target = "blank" class ="funko-buy" data-character ="Shuri"><img src = "./images/Funko-Pop/Shuri/ShuriBox.png" class = "funko-image"></a>
-                    <a href = "https://www.amazon.com/Funko-POP-Marvel-Avengers-Infinity/dp/B079PZQ1VC/ref=sr_1_7?keywords=groot+funko+pop&qid=1552444818&s=gateway&sr=8-7" target = "blank" class ="funko-buy" data-character = "TeenGroot"><img src = "./images/Funko-Pop/TeenGroot/TeenGrootBox.png" class = "funko-image"></a>
-                    <a href = "https://www.amazon.com/Funko-Pop-Marvel-Movie-Erik-Collectible/dp/B0779C5VSV/ref=sr_1_1?keywords=killmonger+funko+pop&qid=1552443535&s=gateway&sr=8-1" target = "blank" class ="funko-buy" data-character = "Killmonger"><img src = "./images/Funko-Pop/Killmonger/KillmongerBox.png" class = "funko-image"></a>
-                    <a href = "https://www.amazon.com/Funko-POP-Marvel-Avengers-Infinity/dp/B079PQ7TRJ/ref=sr_1_3?keywords=thor+funko+pop&qid=1552444879&s=gateway&sr=8-3" target = "blank" class ="funko-buy" data-character = "Thor"><img src = "./images/Funko-Pop/Thor/ThorBox.png" class = "funko-image"></a>
-            </div>
+    <div class="container trophy-closet">
+        <div class="row trophy-row">
+            <a href="https://www.amazon.com/Funko-POP-Marvel-Avengers-Infinity/dp/B079PPFD5D/ref=sr_1_1?keywords=black+widow+funko+pop&qid=1552441077&s=gateway&sr=8-1"
+                target="blank" class="funko-hide" id="BlackWidow"><img
+                    src="./images/Funko-Pop/BlackWidow/BlackWidowBox.png" class="funko-image"
+                    data-character="BlackWidow"></a>
+            <a href="https://www.amazon.com/Funko-POP-Marvel-Avengers-Infinity/dp/B07G4YYKG2/ref=sr_1_1?keywords=bucky+funko+pop&qid=1552441933&s=gateway&sr=8-1"
+                target="blank" class="funko-hide" id="Bucky" data-character="Bucky"><img
+                    src="./images/Funko-Pop/Bucky/BuckyBox.png" class="funko-image"></a>
+            <a href="https://www.amazon.com/Funko-POP-Marvel-Avengers-Infinity/dp/B079PQ7TQS/ref=sr_1_1?keywords=captain+america+funko+pop&qid=1552442141&s=gateway&sr=8-1"
+                target="blank" class="funko-hide" id="CaptainAmerica" data-character="CaptainAmerica"><img
+                    src="./images/Funko-Pop/CaptainAmerica/CaptainAmericaBox.png" class="funko-image"></a>
+            <a href="https://www.amazon.com/Funko-Pop-Marvel-Captain-Multicolor/dp/B07HB8C21N/ref=sr_1_2?keywords=captain+marvel+funko+pop&qid=1552442325&s=gateway&sr=8-2"
+                target="blank" class="funko-hide" id="CapMarvel" data-character="CapMarvel"><img
+                    src="./images/Funko-Pop/CaptainMarvel/CapMarvelBox.png" class="funko-image"></a>
         </div>
+        <div class="row trophy-row mt-5 mb-5">
+            <a href="https://www.amazon.com/Funko-Marvel-Strange-Bobblehaed-Figure/dp/B01JL8KELG/ref=sr_1_1?keywords=dr+strange+funko+pop&qid=1552442667&s=gateway&sr=8-1"
+                target="blank" class="funko-hide" id="DrStrange" data-character="DrStrange"><img
+                    src="./images/Funko-Pop/DrStrange/DrSrangeBox.png" class="funko-image"></a>
+            <a href="https://www.amazon.com/Pop-Marvel-Thor-Ragnarok-Masked/dp/B072Z2ZVZG/ref=sr_1_1?crid=3NYLY4XW9ZDDE&keywords=hela+funko+pop&qid=1552443041&s=gateway&sprefix=hela+funko%2Caps%2C139&sr=8-1"
+                target="blank" class="funko-hide" data-caracter="Hela" id="Hela"><img
+                    src="./images/Funko-Pop/Hela/HelaBox.png" class="funko-image"></a>
+            <a href="https://www.amazon.com/Funko-POP-Movies-Guardians-Galaxy/dp/B01M5KD8NL/ref=sr_1_1?keywords=starlord+funko+pop&qid=1552444686&s=gateway&sr=8-1"
+                target="blank" class="funko-hide" data-character="StarLord" id="StarLord"><img
+                    src="./images/Funko-Pop/StarLord/StarLordBox.png" class="funko-image"></a>
+            <a href="https://www.amazon.com/Funko-POP-Marvel-Dancing-Bobble/dp/B00N1EJXUU/ref=sr_1_2?crid=12CN0RUAUZH24&keywords=groot+funko+pop&qid=1552443801&s=gateway&sprefix=groot+fu%2Caps%2C142&sr=8-2"
+                target="blank" class="funko-hide" data-character="SapGroot" id="SapGroot"><img
+                    src="./images/Funko-Pop/SapGroot/SapGrootBox.png" class="funko-image"></a>
+        </div>
+        <div class="row trophy-row mt-5">
+            <a href="https://www.amazon.com/Funko-Pop-Marvel-Panther-Collectible/dp/B07799VYN8/ref=sr_1_1?crid=FK702L2YO6JQ&keywords=shuri+funko+pop&qid=1552444586&s=gateway&sprefix=shuri+fu%2Caps%2C136&sr=8-1"
+                target="blank" class="funko-hide" data-character="Shuri" id="Shuri"><img
+                    src="./images/Funko-Pop/Shuri/ShuriBox.png" class="funko-image"></a>
+            <a href="https://www.amazon.com/Funko-POP-Marvel-Avengers-Infinity/dp/B079PZQ1VC/ref=sr_1_7?keywords=groot+funko+pop&qid=1552444818&s=gateway&sr=8-7"
+                target="blank" class="funko-hide" data-character="TeenGroot" id="TeenGroot"><img
+                    src="./images/Funko-Pop/TeenGroot/TeenGrootBox.png" class="funko-image"></a>
+            <a href="https://www.amazon.com/Funko-Pop-Marvel-Movie-Erik-Collectible/dp/B0779C5VSV/ref=sr_1_1?keywords=killmonger+funko+pop&qid=1552443535&s=gateway&sr=8-1"
+                target="blank" class="funko-hide" data-character="Killmonger" id="Killmonger"><img
+                    src="./images/Funko-Pop/Killmonger/KillmongerBox.png" class="funko-image"></a>
+            <a href="https://www.amazon.com/Funko-POP-Marvel-Avengers-Infinity/dp/B079PQ7TRJ/ref=sr_1_3?keywords=thor+funko+pop&qid=1552444879&s=gateway&sr=8-3"
+                target="blank" class="funko-hide" data-character="Thor" id="Thor"><img
+                    src="./images/Funko-Pop/Thor/ThorBox.png" class="funko-image"></a>
+        </div>
+    </div>
 </body>
 
-    <script>
-            // $(".funko-buy" + active.headCharacter).css("visibility", "visible");
-    </script>
-    <script src="/js/jquery.js"></script>
-    <script src="/js/trophy-room.js"></script>
+<script>
+    // $(".funko-buy" + active.headCharacter).css("visibility", "visible");
+    $(".funko-hide").hide();
+    if (localStorage.trophy1) {
+        $('#BlackWidow').show();
+    };
+    if (localStorage.trophy2) {
+        $('#Bucky').show();
+    };
+    if (localStorage.trophy3) {
+        $('#CaptainAmerica').show();
+    };
+    if (localStorage.trophy4) {
+        $('#CapMarvel').show();
+    };
+    if (localStorage.trophy5) {
+        $('#DrStrange').show();
+    };
+    if (localStorage.trophy6) {
+        $('#SapGroot').show();
+    };
+    if (localStorage.trophy7) {
+        $('#Shuri').show();
+    };
+    if (localStorage.trophy8) {
+        $('$TeenGroot').show();
+    };
+    if (localStorage.trophy9) {
+        $('$Killmonger').show();
+    };
+    if (localStorage.trophy10) {
+        $('#Thor').show();
+    };
+    if (localStorage.trophy11) {
+        $('#Hela').show();
+    };
+    if (localStorage.trophy12) {
+        $('#StarLord').show();
+    };
 
+
+
+</script>
+<script src="/js/jquery.js"></script>
+<script src="/js/trophy-room.js"></script>
+<script src="js/app.js"></script>
 
 </html>
