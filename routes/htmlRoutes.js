@@ -8,7 +8,7 @@ module.exports = function (app){
     if (req.user) {
       res.redirect("/create");
     }
-    res.sendFile(path.join(__dirname, "../public/signup.html"));
+    res.sendFile(path.join(__dirname, "../public/guest.html"));
     // res.sendFile(path.join(__dirname, "../views/index.html"));
   });
 
