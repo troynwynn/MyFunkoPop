@@ -158,7 +158,7 @@ $(document).on("click", ".removeLegs", function(){
 // Winning conditions
 const $confetti = $("#confetti");
 $confetti.hide();
-$confetti.get(0).pause();
+//$confetti.get(0).pause();
 // Chacks if all parts match
 $(document).on("click", ".matchBtn", function(){
   if((active.headCharacter === active.torsoCharacter) 
@@ -170,7 +170,53 @@ $(document).on("click", ".matchBtn", function(){
     setTimeout(function(){ $confetti.get(0).pause();
       $confetti.hide(); 
     }, 7000)
+
+    
+    switch (active.headCharacter){
+      case "BlackWidow":
+      localStorage.setItem("trophy1", active.headCharacter);
+      break;
+      case "Bucky":
+      localStorage.setItem("trophy2", active.headCharacter);
+      break;
+      case "CaptainAmerica":
+      localStorage.setItem("trophy3", active.headCharacter);
+      break;
+      case "CapMarvel":
+      localStorage.setItem("trophy4", active.headCharacter);
+      break;
+      case "DrStrange":
+      localStorage.setItem("trophy5", active.headCharacter);
+      break;
+      case "SapGroot":
+      localStorage.setItem("trophy6", active.headCharacter);
+      break;
+      case "Shuri":
+      localStorage.setItem("trophy7", active.headCharacter);
+      break;
+      case "TeenGroot":
+      localStorage.setItem("trophy8", active.headCharacter);
+      break;
+      case "Killmonger":
+      localStorage.setItem("trophy9", active.headCharacter);
+      break;
+      case "Thor":
+      localStorage.setItem("trophy10", active.headCharacter);
+      break;
+      case "Hela":
+      localStorage.setItem("trophy11", active.headCharacter);
+      break;
+      case "StarLord":
+      localStorage.setItem("trophy12", active.headCharacter);
+      break;
+    }
+
+
+
   }
+
+
+
   
   let bobbleL = setInterval(function(){
     $(".head").css("transition", "ease 1s")
