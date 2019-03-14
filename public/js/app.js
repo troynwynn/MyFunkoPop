@@ -170,8 +170,8 @@ $(document).on("click", ".matchBtn", function(){
     setTimeout(function(){ $confetti.get(0).pause();
       $confetti.hide(); 
     }, 7000)
-  }
   
+  $("." + active.headCharacter).show();
   let bobbleL = setInterval(function(){
     $(".head").css("transition", "ease 1s")
     $(".head").css("transform", "translate(-30px, 0px)")
@@ -186,4 +186,5 @@ $(document).on("click", ".matchBtn", function(){
     $(".head").css("transition", "ease 0s")
     $(".head").css("transform", "translate( 0px, 0px)")
   }, 7000 )
+}
 });
