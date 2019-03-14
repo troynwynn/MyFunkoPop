@@ -30,9 +30,11 @@ $(document).ready(function() {
       return isValid;
     }
 
-    var avatar = $("#character option:selected");
-    var avatarInput = avatar.text().split(' ').join('');
-    var aviSrc = `/images/Funko-Pop/${avatarInput}/${avatarInput}Head.png`;
+    if (validateForm()) {
+      var avatar = $("#character option:selected");
+      var avatarInput = avatar.text().split(' ').join('');
+      var aviSrc = `/images/Funko-Pop/${avatarInput}/${avatarInput}Head.png`;
+    }
 
     var userData = {
       email: emailInput.val().trim(),
@@ -40,7 +42,7 @@ $(document).ready(function() {
       avi: aviSrc
     };
 
-    if (!userData.email || !userData.password || !userData.avi) {
+    if (!userData.email || !userData.password || userData.avi == "") {
       return;
     }
     // If we have an email and password, run the signUpUser function

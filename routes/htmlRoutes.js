@@ -8,7 +8,7 @@ module.exports = function (app){
     if (req.user) {
       res.redirect("/create");
     }
-    res.sendFile(path.join(__dirname, "../public/signup.html"));
+    res.sendFile(path.join(__dirname, "../public/guest.html"));
     // res.sendFile(path.join(__dirname, "../views/index.html"));
   });
 
@@ -19,6 +19,8 @@ module.exports = function (app){
     }
     res.sendFile(path.join(__dirname, "../public/login.html"));
   });
+
+
 
   // RECENTLY ADDED SECURITY.HTML
   // app.get("/security", function(req, res) {
@@ -33,6 +35,7 @@ module.exports = function (app){
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
   app.get("/create", isAuthenticated, function(req, res) {
     res.sendFile(path.join(__dirname, "../public/create.html"));
+
   });
 
   app.get("/users", isAuthenticated, function(req, res) {
@@ -40,9 +43,11 @@ module.exports = function (app){
   });
 
 
-  // app.get("/signin", function(req, res) {
-  //   res.sendFile(path.join(__dirname, "../views/sign-in.html"));
-  // });
+  app.get("/signup", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/signup.html"));
+  });
+
+
 
   // app.get("/trades", function(req, res) {
   //   res.sendFile(path.join(__dirname, "../views/trades.html"));
