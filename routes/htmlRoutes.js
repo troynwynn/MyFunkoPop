@@ -20,6 +20,8 @@ module.exports = function (app){
     res.sendFile(path.join(__dirname, "../public/login.html"));
   });
 
+
+
   // RECENTLY ADDED SECURITY.HTML
   // app.get("/security", function(req, res) {
   //   // If the user already has an account send them to the members page
@@ -33,6 +35,7 @@ module.exports = function (app){
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
   app.get("/create", isAuthenticated, function(req, res) {
     res.sendFile(path.join(__dirname, "../public/create.html"));
+
   });
 
   app.get("/users", isAuthenticated, function(req, res) {
@@ -43,6 +46,8 @@ module.exports = function (app){
   app.get("/signup", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/signup.html"));
   });
+
+
 
   // app.get("/trades", function(req, res) {
   //   res.sendFile(path.join(__dirname, "../views/trades.html"));
