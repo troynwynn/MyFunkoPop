@@ -8,7 +8,9 @@
 }
 #background{
   background-image: url("https://i.stack.imgur.com/Q33C1.gif");
-  height: 100vh;
+  zoom: 65%; 
+  -moz-transform: scale(0.65); 
+  -moz-transform-origin: 0 0; 
 }
 .font1{
   font-family: "Bangers", "cursive";
@@ -73,5 +75,4 @@
   border: 3px solid white;
   margin-left: 10px;
   margin-right: 5px;
-
 }

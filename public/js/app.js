@@ -186,5 +186,5 @@ $(document).on("click", ".matchBtn", function(){
     $(".head").css("transition", "ease 0s")
     $(".head").css("transform", "translate( 0px, 0px)")
   }, 7000 )
-}
+  }
 });
