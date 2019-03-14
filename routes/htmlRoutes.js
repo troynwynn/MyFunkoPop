@@ -40,9 +40,9 @@ module.exports = function (app){
   });
 
 
-  // app.get("/signin", function(req, res) {
-  //   res.sendFile(path.join(__dirname, "../views/sign-in.html"));
-  // });
+  app.get("/signup", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/signup.html"));
+  });
 
   // app.get("/trades", function(req, res) {
   //   res.sendFile(path.join(__dirname, "../views/trades.html"));
