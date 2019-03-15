@@ -58,7 +58,7 @@ function drop(ev) {
   ev.preventDefault();
   if (limbs === "head") {
     document.querySelector("." + part)
-      .style = "position:fixed; top:0; height:900px; width:900px;";
+      .style = "position:absolute; top:-70px; height:900px; width:900px;";
     document.querySelector(".wrapper").append(droppedItem);
     $(".head").draggable({
       disabled: false
@@ -70,7 +70,7 @@ function drop(ev) {
     $("#" + activeItem).draggable();
   } else if (limbs === "torso") {
     document.querySelector("." + part)
-      .style = "position: fixed; top:200px; height:900px; width:900px;";
+      .style = "position: absolute; top:90px; height:900px; width:900px;";
     document.querySelector(".wrapper").append(droppedItem);
     $(".torso").draggable({
       disabled: false
@@ -82,7 +82,7 @@ function drop(ev) {
     $("#" + activeItem).draggable();
   } else if (limbs === "legs") {
     document.querySelector("." + part)
-      .style = "position:fixed; top:400px; height:900px; width:900px;";
+      .style = "position:absolute; top:215px; height:900px; width:900px;";
     document.querySelector(".wrapper").append(droppedItem);
     $(".legs").draggable({
       disabled: false
@@ -102,18 +102,18 @@ function drop(ev) {
 
 // Targets the head so we can move the head only
 $(document).on("click", ".headBtn", function () {
-  $("#" + active.headID).css('z-index', 3);
-  $(".torso, .legs").css('z-index', 2);
+  $("#" + active.headID).css('z-index', 2);
+  $(".torso, .legs").css('z-index', 1);
 });
 // Targets the body so we can move the body only
 $(document).on("click", ".bodyBtn", function () {
-  $("#" + active.torsoID).css('z-index', 3);
-  $(".head, .legs").css('z-index', 2);
+  $("#" + active.torsoID).css('z-index', 2);
+  $(".head, .legs").css('z-index', 1);
 });
 // Targets the legs so we can move the legs only
 $(document).on("click", ".legsBtn", function () {
-  $("#" + active.legsID).css('z-index', 3);
-  $(".torso, .head").css('z-index', 2);
+  $("#" + active.legsID).css('z-index', 2);
+  $(".torso, .head").css('z-index', 1);
 });
 // Removes the chosen head
 $(document).on("click", ".removeHead", function () {
