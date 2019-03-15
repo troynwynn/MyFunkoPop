@@ -21,13 +21,13 @@ let myFunko = {
 let active = {
   head: null,
   headID: null,
-  headCharacter: null, 
+  headCharacter: null,
   torso: null,
   torsoID: null,
-  torsoCharacter: null, 
+  torsoCharacter: null,
   legs: null,
   legsID: null,
-  legsCharacter: null, 
+  legsCharacter: null,
 }
 
 // This function prevents the drop default 
@@ -42,7 +42,7 @@ function drag(ev) {
   droppedItem = null;
   activeItem = null;
   currentScr = null;
-  
+
   part = ev.target.dataset.part;
   datatype = ev.target.dataset;
   limbs = ev.target.dataset.limb;
@@ -56,37 +56,43 @@ function drag(ev) {
 // and uses the "id" of the dragged item to make it draggable through the widget
 function drop(ev) {
   ev.preventDefault();
-  if(limbs === "head"){
+  if (limbs === "head") {
     document.querySelector("." + part)
-    .style = "position:fixed; top:0; height:900px; width:900px;";
+      .style = "position:fixed; top:0; height:900px; width:900px;";
     document.querySelector(".wrapper").append(droppedItem);
-    $(".head").draggable({ disabled: false });
+    $(".head").draggable({
+      disabled: false
+    });
     myFunko.head = droppedItem.src;
     active.head = droppedItem;
     active.headID = activeItem;
-    active.headCharacter = datatype.character; 
-    $("#" + activeItem).draggable(); 
+    active.headCharacter = datatype.character;
+    $("#" + activeItem).draggable();
   } else if (limbs === "torso") {
     document.querySelector("." + part)
-    .style = "position: fixed; top:200px; height:900px; width:900px;";
+      .style = "position: fixed; top:200px; height:900px; width:900px;";
     document.querySelector(".wrapper").append(droppedItem);
-    $(".torso").draggable({ disabled: false });
+    $(".torso").draggable({
+      disabled: false
+    });
     myFunko.torso = droppedItem.src;
     active.torso = droppedItem;
     active.torsoID = activeItem;
     active.torsoCharacter = datatype.character;
-    $("#" + activeItem).draggable(); 
-  } else if(limbs === "legs"){
+    $("#" + activeItem).draggable();
+  } else if (limbs === "legs") {
     document.querySelector("." + part)
-    .style = "position:fixed; top:400px; height:900px; width:900px;";
+      .style = "position:fixed; top:400px; height:900px; width:900px;";
     document.querySelector(".wrapper").append(droppedItem);
-    $(".legs").draggable({ disabled: false });
+    $(".legs").draggable({
+      disabled: false
+    });
     myFunko.legs = droppedItem.src;
     active.legs = droppedItem;
     active.legsID = activeItem;
     active.legsCharacter = datatype.character;
-    $("#" + activeItem).draggable(); 
-  } else if(limbs === "background"){
+    $("#" + activeItem).draggable();
+  } else if (limbs === "background") {
     $("#activeBackground").attr("src", droppedItem.src)
   }
   // console.log(droppedItem);
@@ -95,35 +101,25 @@ function drop(ev) {
 }
 
 // Targets the head so we can move the head only
-$(document).on("click", ".headBtn", function(){
-  // $(".head").draggable({ disabled: false });
+$(document).on("click", ".headBtn", function () {
   $(".head").css('z-index', 3);
   $(".torso, .legs").css('z-index', 2);
-  // $(".torso, .legs").draggable({
-  //   disabled: true
-  // });
 });
 // Targets the body so we can move the body only
-$(document).on("click", ".bodyBtn", function(){
-  // $(".torso").draggable({ disabled: false });
+$(document).on("click", ".bodyBtn", function () {
   $(".torso").css('z-index', 3);
   $(".head, .legs").css('z-index', 2);
-  // $(".head, .legs").draggable({
-  //   disabled: true
-  // })
 });
 // Targets the legs so we can move the legs only
-$(document).on("click", ".legsBtn", function(){
-  // $(".legs").draggable({ disabled: false });
+$(document).on("click", ".legsBtn", function () {
   $(".legs").css('z-index', 3);
   $(".torso, .head").css('z-index', 2);
-  // $(".torso, .head").draggable({
-  //   disabled: true
-  // })
 });
 // Removes the chosen head
-$(document).on("click", ".removeHead", function(){
-  $(".head").draggable({ disabled: true })
+$(document).on("click", ".removeHead", function () {
+  $(".head").draggable({
+    disabled: true
+  })
   $("#" + active.headID).css("height", 200);
   $("#" + active.headID).css("width", 200);
   $("#" + active.headID).css("top", "auto");
@@ -133,8 +129,10 @@ $(document).on("click", ".removeHead", function(){
   $("." + active.headID).append(active.head);
 });
 // Removes the chosen body
-$(document).on("click", ".removeBody", function(){
-  $(".torso").draggable({ disabled: true })
+$(document).on("click", ".removeBody", function () {
+  $(".torso").draggable({
+    disabled: true
+  })
   $("#" + active.torsoID).css("height", 200);
   $("#" + active.torsoID).css("width", 200);
   $("#" + active.torsoID).css("top", "auto");
@@ -144,92 +142,100 @@ $(document).on("click", ".removeBody", function(){
   $("." + active.torsoID).append(active.torso);
 });
 // Removes the chosen legs 
-$(document).on("click", ".removeLegs", function(){
-  $(".legs").draggable({ disabled: true })
+$(document).on("click", ".removeLegs", function () {
+  $(".legs").draggable({
+    disabled: true
+  })
   $("#" + active.legsID).css("height", 200);
   $("#" + active.legsID).css("width", 200);
   $("#" + active.legsID).css("top", "auto");
   $("#" + active.legsID).css("left", "auto");
   $("#" + active.legsID).css("z-index", 1);
   $("#" + active.legsID).css("position", "relative");
-  $("." + active.legsID).append(active.legs); 
+  $("." + active.legsID).append(active.legs);
 });
 
 // Winning conditions
 const $confetti = $("#confetti");
 $confetti.hide();
-//$confetti.get(0).pause();
 // Chacks if all parts match
-$(document).on("click", ".matchBtn", function(){
-  if((active.headCharacter === active.torsoCharacter) 
-  && (active.torsoCharacter === active.legsCharacter)){
+$(document).on("click", ".matchBtn", function () {
+  if ((active.headCharacter === active.torsoCharacter) &&
+    (active.torsoCharacter === active.legsCharacter) &&
+    (active.headCharacter !== null)) {
     $(".head").css("z-index", 3)
-    console.log("You Won");
     $confetti.show();
     $confetti.get(0).play();
-    setTimeout(function(){ $confetti.get(0).pause();
-      $confetti.hide(); 
+    setTimeout(function () {
+      $confetti.get(0).pause();
+      $confetti.hide();
     }, 7000)
 
-    
-    switch (active.headCharacter){
+    // console.log(this);
+
+    switch (active.headCharacter) {
       case "BlackWidow":
-      localStorage.setItem("trophy1", active.headCharacter);
-      break;
+        localStorage.setItem("trophy1", active.headCharacter);
+        break;
       case "Bucky":
-      localStorage.setItem("trophy2", active.headCharacter);
-      break;
+        localStorage.setItem("trophy2", active.headCharacter);
+        break;
       case "CaptainAmerica":
-      localStorage.setItem("trophy3", active.headCharacter);
-      break;
+        localStorage.setItem("trophy3", active.headCharacter);
+        break;
       case "CapMarvel":
-      localStorage.setItem("trophy4", active.headCharacter);
-      break;
+        localStorage.setItem("trophy4", active.headCharacter);
+        break;
       case "DrStrange":
-      localStorage.setItem("trophy5", active.headCharacter);
-      break;
+        localStorage.setItem("trophy5", active.headCharacter);
+        break;
       case "SapGroot":
-      localStorage.setItem("trophy6", active.headCharacter);
-      break;
+        localStorage.setItem("trophy6", active.headCharacter);
+        break;
       case "Shuri":
-      localStorage.setItem("trophy7", active.headCharacter);
-      break;
+        localStorage.setItem("trophy7", active.headCharacter);
+        break;
       case "TeenGroot":
-      localStorage.setItem("trophy8", active.headCharacter);
-      break;
+        localStorage.setItem("trophy8", active.headCharacter);
+        break;
       case "Killmonger":
-      localStorage.setItem("trophy9", active.headCharacter);
-      break;
+        localStorage.setItem("trophy9", active.headCharacter);
+        break;
       case "Thor":
-      localStorage.setItem("trophy10", active.headCharacter);
-      break;
+        localStorage.setItem("trophy10", active.headCharacter);
+        break;
       case "Hela":
-      localStorage.setItem("trophy11", active.headCharacter);
-      break;
+        localStorage.setItem("trophy11", active.headCharacter);
+        break;
       case "StarLord":
-      localStorage.setItem("trophy12", active.headCharacter);
-      break;
+        localStorage.setItem("trophy12", active.headCharacter);
+        break;
     }
 
+    let bobbleL = setInterval(function () {
+      $(".head").css("transition", "ease 1s")
+      $(".head").css("transform", "translate(-30px, 0px)")
+    }, 400);
+    let bobbleR = setInterval(function () {
+      $(".head").css("transition", "ease 1s")
+      $(".head").css("transform", "translate(30px, 0px)")
+    }, 800);
 
-
+    setTimeout(function () {
+      clearInterval(bobbleL);
+      clearInterval(bobbleR);
+      $(".head").css("transition", "ease 0s")
+      $(".head").css("transform", "translate( 0px, 0px)")
+    }, 7000);
   }
+});
 
-
-
-  
-  let bobbleL = setInterval(function(){
-    $(".head").css("transition", "ease 1s")
-    $(".head").css("transform", "translate(-30px, 0px)")
-  }, 400);
-  let bobbleR = setInterval(function(){
-    $(".head").css("transition", "ease 1s")
-    $(".head").css("transform", "translate(30px, 0px)")
-  }, 800);
-
-  setTimeout(function(){clearInterval(bobbleL);
-    clearInterval(bobbleR);
-    $(".head").css("transition", "ease 0s")
-    $(".head").css("transform", "translate( 0px, 0px)")
-  }, 7000 )
+$(".matchBtn").hover(function () {
+  if ((active.headCharacter === active.torsoCharacter) &&
+    (active.torsoCharacter === active.legsCharacter) &&
+    (active.headCharacter !== null)) {
+    $(".matchBtn").attr("data-toggle", "modal");
+  }
+}, function () {
+  $(".matchBtn").attr("data-toggle", "");
 });
