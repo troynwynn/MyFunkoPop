@@ -33,7 +33,8 @@ $(document).ready(function() {
     if (validateForm()) {
       var avatar = $("#character option:selected");
       var avatarInput = avatar.text().split(' ').join('');
-      var aviSrc = `/images/Funko-Pop/${avatarInput}/${avatarInput}Head.png`;
+      var aviSrc = "/images/Funko-Pop/" + avatarInput + "/" + avatarInput + "Head.png";
+      // `/images/Funko-Pop/${avatarInput}/${avatarInput}Head.png`;
     }
 
     var userData = {
@@ -42,14 +43,14 @@ $(document).ready(function() {
       avi: aviSrc
     };
 
-    if (!userData.email || !userData.password || userData.avi == "") {
+    if (!userData.email || !userData.password || userData.avi === "") {
       return;
     }
     // If we have an email and password, run the signUpUser function
     signUpUser(userData.email, userData.password, userData.avi);
     emailInput.val("");
     passwordInput.val("");
-    avatar.val("")
+    avatar.val("");
   });
 
   // Does a post to the signup route. If successful, we are redirected to the members page
