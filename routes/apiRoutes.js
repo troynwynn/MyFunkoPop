@@ -72,8 +72,24 @@ module.exports = function(app) {
       }
     })
       .then(function(dbUser) {
-        res.json(User);
+        res.json(dbUser);
       });
+  });
+
+  app.put("/api/signup", function(req, res) {
+    // Update takes in an object describing the properties we want to update, and
+    // we use where to describe which objects we want to update
+    console.log(req.body);
+    db.User.update({
+        avi: req.body.avi
+    }, {
+      where: {
+        id: req.body.id
+      }
+    }).then(function(dbUser) {
+      // res.json(dbUser);
+      // res.redirect(307, "/api/signup");
+    });
   });
 
 

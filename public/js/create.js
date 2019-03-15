@@ -1,7 +1,14 @@
 $(document).ready(function() {
-  $.get("/api/signup").then(function(data) {
-    $("#avi").attr("src", data.avi);
-  });
+  if (!localStorage.avatar) {
+
+    $.get("/api/signup").then(function(data) {
+      $("#avi").attr("src", data.avi);
+    });
+  } else {
+
+    $("#avi").attr("src", localStorage.avatar);
+  }
+ 
 
   $("#refresh").on("click", function() {
     document.location.reload();

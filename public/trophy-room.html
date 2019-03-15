@@ -35,16 +35,24 @@
                 <!-- <li class="nav-item active my-auto">
                         <a class="nav-link font2" href="trades.html">Trades</a>
                     </li> -->
-                <li class="nav-item active my-auto">
-                    <a class="nav-link font2" href="login.html">Sign-In</a>
-                </li>
                 <!-- <li class="nav-item active my-auto">
-                        <a class="nav-link font2" href="/api/users">Users</a>
-                    </li> -->
+                    <a class="nav-link font2" href="login.html">Sign-In</a>
+                </li> -->
                 <li class="nav-item active my-auto">
-                    <a class="nav-link font2" href="/logout">Logout</a>
+                    <a class="nav-link font2" href="/create">Create</a>
                 </li>
-                <img src="" alt="Avatar" class="avatar" id="avi">
+                <div class="btn-group">
+
+                    <img src="" alt="Avatar" class="avatar ml-4" id="avi" data-toggle="dropdown">
+                    <button type="button" class="btn text-white dropdown-toggle pl-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    </button>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="/settings"> Settings</a>
+                        <div class="dropdown-divider" style="border: 1px solid whitesmoke"></div>
+                        <a class="dropdown-item" href="/logout">Logout</a>
+                    </div>
+                  </div>
+                <!-- <img src="" alt="Avatar" class="avatar" id="avi"> -->
             </ul>
         </div>
     </nav>

@@ -22,31 +22,46 @@
 </head>
 
 <body id="background">
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark pb-2 my-auto">
-    <a class="navbar-brand font1 blinking" style="font-size: 45px; color:red;" href="/"><span style="color: rgb(250, 221, 221); text-shadow: 2px 2px 8px #FF0000;">My Funko</span> Pop</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-              <a class="nav-link font2" href="login.html">Sign-In</a>
-          </li>
-      </ul>
-    </div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand font1 blinking" style="font-size: 45px; color:red;" href="/"><span
+                style="color: rgb(250, 221, 221); text-shadow: 2px 2px 8px #FF0000;">My Funko</span> Pop</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active my-auto">
+                    <a class="nav-link font2" href="trophy-room.html">Trophy Room</a>
+                </li>
+                <li class="nav-item active my-auto">
+                    <a class="nav-link font2" href="/create">Create</a>
+                </li>
+            <div class="btn-group">
+                <img src="" alt="Avatar" class="avatar ml-4" id="avi" data-toggle="dropdown">
+                <!-- Example single danger button -->
+            <button type="button" class="btn text-white dropdown-toggle pl-1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              <!-- Action -->
+            </button>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="/settings">Settings</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="/logout">Logout</a>
+            </div>
+          </div>
     
-  </nav>
-<br>
+            </ul>
+        </div>
+    </nav>
+    
+        <br>
 
   <div class="container">
     <div class="row">
-      
       <div class="card border-danger col-md-6 col-md-offset-3 mx-auto">
-          <div class="card-header"><h2>Sign Up</h2></div>
-          <!-- <h2>Sign Up</h2> -->
-          <div class="card-body text-dark">
+        <div class="card-title card-header mb-2 pl-0"><h2>Settings</h2></div>
         <form class="signup">
-          <div class="form-group">
+          <!-- <div class="form-group">
             <label for="exampleInputEmail1">Email address</label>
             <input type="email" class="form-control" id="email-input" placeholder="Email">
           </div>
@@ -54,8 +69,9 @@
             <label for="exampleInputPassword1">Password</label>
             <input type="password" class="form-control" id="password-input" placeholder="Password">
           </div>
-         
-          <h3><strong>Choose an Avatar</strong></h3>
+          -->
+          <h5 class="card-text"><strong>Select a New Avatar</strong></h5>
+          <!-- <h3><strong>Select new Avatar</strong></h3> -->
             <select class="chosen-select" id="character">
                   <option value=""></option>
                   <option value="1">Black Widow</option>
@@ -76,11 +92,10 @@
                 <span class="sr-only">Error:</span> <span class="msg"></span>
               </div>
             <hr>
-          <button id="submit" type="submit" class="btn btn-dark">Sign Up</button>
+            <button id="submit" type="submit" class="btn btn-dark">Save Changes</button>
         </form>
         <br />
-        <p>Or log in <a href="/login">here</a></p>
-        </div>
+        <!-- <p>Or log in <a href="/login">here</a></p> -->
       </div>
     </div>
   </div>
@@ -116,7 +131,7 @@
   
   </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="js/signup.js"></script>
+  <script type="text/javascript" src="js/avatar.js"></script>
 
 
 </body>
