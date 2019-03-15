@@ -102,17 +102,17 @@ function drop(ev) {
 
 // Targets the head so we can move the head only
 $(document).on("click", ".headBtn", function () {
-  $(".head").css('z-index', 3);
+  $("#" + active.headID).css('z-index', 3);
   $(".torso, .legs").css('z-index', 2);
 });
 // Targets the body so we can move the body only
 $(document).on("click", ".bodyBtn", function () {
-  $(".torso").css('z-index', 3);
+  $("#" + active.torsoID).css('z-index', 3);
   $(".head, .legs").css('z-index', 2);
 });
 // Targets the legs so we can move the legs only
 $(document).on("click", ".legsBtn", function () {
-  $(".legs").css('z-index', 3);
+  $("#" + active.legsID).css('z-index', 3);
   $(".torso, .head").css('z-index', 2);
 });
 // Removes the chosen head
@@ -124,7 +124,7 @@ $(document).on("click", ".removeHead", function () {
   $("#" + active.headID).css("width", 200);
   $("#" + active.headID).css("top", "auto");
   $("#" + active.headID).css("left", "auto");
-  $("#" + active.headID).css("z-index", 1);
+  $(".head").css("z-index", 1);
   $("#" + active.headID).css("position", "relative");
   $("." + active.headID).append(active.head);
 });
@@ -137,7 +137,7 @@ $(document).on("click", ".removeBody", function () {
   $("#" + active.torsoID).css("width", 200);
   $("#" + active.torsoID).css("top", "auto");
   $("#" + active.torsoID).css("left", "auto");
-  $("#" + active.torsoID).css("z-index", 1);
+  $(".torso").css("z-index", 1);
   $("#" + active.torsoID).css("position", "relative");
   $("." + active.torsoID).append(active.torso);
 });
@@ -150,7 +150,7 @@ $(document).on("click", ".removeLegs", function () {
   $("#" + active.legsID).css("width", 200);
   $("#" + active.legsID).css("top", "auto");
   $("#" + active.legsID).css("left", "auto");
-  $("#" + active.legsID).css("z-index", 1);
+  $(".legs").css("z-index", 1);
   $("#" + active.legsID).css("position", "relative");
   $("." + active.legsID).append(active.legs);
 });
@@ -172,7 +172,7 @@ $(document).on("click", ".matchBtn", function () {
     }, 7000)
 
     // console.log(this);
-
+    $("#congrats").text(`Congraduations you have unlocked ${active.headCharacter} in the Trophy Room`)
     switch (active.headCharacter) {
       case "BlackWidow":
         localStorage.setItem("trophy1", active.headCharacter);
