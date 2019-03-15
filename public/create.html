@@ -369,7 +369,10 @@
                         <ol class="carousel-indicators">
                             <li data-target="#backgroundCarousel" data-slide-to="0" class="active"></li>
                             <li data-target="#backgroundCarousel" data-slide-to="1"></li>
-                            <!-- <li data-target="#carouselExampleIndicators" data-slide-to="2"></li> -->
+                            <li data-target="#backgroundCarousel" data-slide-to="2"></li>
+                            <li data-target="#backgroundCarousel" data-slide-to="3"></li>
+                            <li data-target="#backgroundCarousel" data-slide-to="4"></li>
+                            <li data-target="#backgroundCarousel" data-slide-to="5"></li>
                         </ol>
                         <div class="carousel-inner">
                             <div class="carousel-item active" style="background-color: gray">
@@ -382,9 +385,26 @@
                                     class="d-block backtwo background" alt="background" draggable="true"
                                     ondragstart="drag(event)">
                             </div>
-                            <!-- <div class="carousel-item">
-                                <img src="..." class="d-block " alt="...">
-                            </div> -->
+                            <div class="carousel-item" id="funkoback" style="background-color: gray">
+                                    <img data-part="backthree" data-limb="background" id="back3" src="http://pavbca.com/walldb/original/4/0/3/251268.jpg"
+                                        class="d-block backthree background" alt="background" draggable="true"
+                                        ondragstart="drag(event)">
+                            </div>
+                            <div class="carousel-item" id="funkoback" style="background-color: gray">
+                                    <img data-part="backfour" data-limb="background" id="back4" src="https://atgbcentral.com/data/out/121/5014840-marvel-wallpaper.jpg"
+                                        class="d-block backfour background" alt="background" draggable="true"
+                                        ondragstart="drag(event)">
+                            </div>
+                            <div class="carousel-item" id="funkoback" style="background-color: gray">
+                                    <img data-part="backfive" data-limb="background" id="back5" src="https://www.wallpapers.net/web/wallpapers/avengers-infinity-war-artwork-full-hd-wallpaper-for-desktop-mobiles/1080x1920.jpg"
+                                        class="d-block backfive background" alt="background" draggable="true"
+                                        ondragstart="drag(event)">
+                            </div>
+                            <div class="carousel-item" id="funkoback" style="background-color: gray">
+                                    <img data-part="backsix" data-limb="background" id="back6" src="http://slateman.net/images/gaming/backgrounds/mvc-stage7.gif"
+                                        class="d-block backsix background" alt="background" draggable="true"
+                                        ondragstart="drag(event)">
+                            </div>
                         </div>
                         <a class="carousel-control-prev" href="#backgroundCarousel" role="button" style="color:black"
                             data-slide="prev">
@@ -415,16 +435,33 @@
                         style="height:900px; width:800px;" alt="background">
                   
                 </div>
-                <input class="btn btn-primary state headBtn" type="submit" value="Head">
-                <input class="btn btn-primary state bodyBtn" type="submit" value="Body">
-                <input class="btn btn-primary state legsBtn" type="submit" value="Legs">
+                <input class="btn btn-primary state headBtn" data-toggle="popover" title="Click to move the head after dropped." data-content="Click to move the head after dropped."type="submit" value="Head">
+                <input class="btn btn-primary state bodyBtn" data-toggle="popover" title="Click to move the body after dropped." data-content="Click to move the body after dropped."type="submit" value="Body">
+                <input class="btn btn-primary state legsBtn" data-toggle="popover" title="Click to move the legs after dropped." data-content="Click to move the legs after dropped."type="submit" value="Legs">
                 <input class="btn btn-danger removeHead" type="submit" value="Remove Head">
                 <input class="btn btn-danger removeBody" type="submit" value="Remove Body">
                 <input class="btn btn-danger removeLegs" type="submit" value="Remove Legs">
+           </div>
+           
+           <div class="col-md-3">
+
+           </div>
+           <div class="col-md-9 text-center" style="padding: 2%">    
                 <input class="btn btn-primary matchBtn" type="submit" value="Match">
             </div>
         </div>
-
+        <br>
+        <div class="jumbotron " style="opacity: .85; border-right-width: 300px; background-color: rgb(145, 145, 155)">
+                <div class="container">
+                    <h3 class="display-4">Match the <span
+                        style="color: rgb(250, 221, 221); text-shadow: 2px 2px 8px #FF0000;">Funko </span><span class="font1 blinking" style="font-size: 45px; color:red;">POP</span></h3>
+                        <ul class="lead" style="font-size: 25px">
+                            <li>Match the heads, bodies, and legs of your favorite Marvel Funko-Pops to create the full character</li>
+                            <li>Watch what happens to the screen when you match the character's body parts correctly!</li>
+                        </ul>
+                        <p style="font-size: 32px">Check the Trophy-Room <a href="/trophy-room">here</a> to see what you unlocked!!</p>
+                </div>
+        </div>
     </div>
     <video autoplay muted loop id="confetti">
         <source src="/images/confetti_cannon.mp4" type="video/mp4">
@@ -434,6 +471,13 @@
 <script src="/js/jquery_ui_fr.js"></script>
 <script src="/js/app.js"></script>
 <script src="/js/create.js"></script>
+<script>
+        $(function () {
+            $(".state").popover({
+                container: 'body'
+            })
+        })
+</script>
 
 
 </html>
