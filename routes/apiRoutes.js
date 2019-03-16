@@ -26,11 +26,7 @@ module.exports = function(app) {
       res.redirect(307, "/api/login");
     }).catch(function(err) {
       console.log(err);
-      // res.json(err);
-      // res.redirect(500, "/api/signup");
       res.status(422).json(err.errors[0].message);
-      // throw err(`Duplicate `)
-
     });
   });
 
@@ -41,10 +37,15 @@ module.exports = function(app) {
   });
 
   app.get("/api/users/", function(req, res) {
+    if (!req.user) {
+      // The user is not logged in, send back an empty object
+      res.json({});
+    } else {
     db.User.findAll({})
       .then(function(dbUser) {
         res.json(dbUser);
       });
+    }
   });
 
   // Route for getting some data about our user to be used client side
@@ -55,8 +56,6 @@ module.exports = function(app) {
       res.json({});
     }
     else {
-      // Otherwise send back the user's email and id
-      // Sending back a password, even a hashed password, isn't a good idea
       res.json({
         email: req.user.email,
         id: req.user.id,
@@ -87,78 +86,8 @@ module.exports = function(app) {
         id: req.body.id
       }
     }).then(function(dbUser) {
-      // res.json(dbUser);
-      // res.redirect(307, "/api/signup");
     });
   });
 
 
-  // app.get("/api/users", function(req, res) {
-  //   res.json(users);
-  // });
-
-  // app.post("/api/friends", function(req, res) {
-      
-  //   var newUser = req.body;
-
-  // });
-
 };
-
-
-// var db = require("../models");
-
-// module.exports = function (app) {
-//   // Get all characters
-//   app.get("/api/characters", function (req, res) {
-//     db.Character.findAll({}).then(function (dbCharacters) {
-//       res.json(dbCharacters);
-//     });
-//   });
-
-//   // Get one character
-//   app.get("/api/characters/:id", function (req, res) {
-//     db.Character.findOne({
-//       where: {
-//         id: req.params.id
-//       }
-//     })
-//       .then(function (dbCharacter) {
-//         res.json(dbCharacter);
-//       });
-//   });
-
-//   // Create a new character
-//   app.post("/api/characters", function (req, res) {
-//     db.Post.create({
-//       name: req.body.name,
-//       head: req.body.head,
-//       body: req.body.body,
-//       legs: req.body.legs,
-//       background: req.body.background
-//     })
-//       .then(function (dbCharacter) {
-//         res.json(dbCharacter);
-//       });
-//   });
-
-//   //Update a character by id
-//   app.put("/api/characters", function (req, res) {
-//     db.Post.update(req.body,
-//       {
-//         where: {
-//           id: req.body.id
-//         }
-//       })
-//       .then(function (dbCharacter) {
-//         res.json(dbCharacter);
-//       });
-//   });
-
-//   // Delete an character by id
-//   app.delete("/api/characters/:id", function (req, res) {
-//     db.Character.destroy({ where: { id: req.params.id } }).then(function (dbCharacters) {
-//       res.json(dbCharacters);
-//     });
-//   });
-// };
