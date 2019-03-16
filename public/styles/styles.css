@@ -16,7 +16,7 @@
   font-family: "Bangers", "cursive";
 }
 .font2{
-  font-size: 25px;
+  font-size: 40px;
   font-family: "Bangers", "cursive";
 }
 .trophy-closet{
@@ -66,8 +66,8 @@
 }
 .avatar {
   vertical-align: middle;
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   border-radius: 50%;
   border: 3px solid white;
   /* margin-left: 10px; */

@@ -22,13 +22,7 @@ app.use(passport.session());
 // Routes
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
-// require("./routes/user-api-routes")(app);
-// require("./routes/toy-api-routes")(app);
 
-
-
-// If running a test, set syncOptions.force to true
-// clearing the `testdb`
 var syncOptions = { force: false };
 if (process.env.NODE_ENV === "test") {
   syncOptions.force = true;
