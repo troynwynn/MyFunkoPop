@@ -19,4 +19,4 @@
 - jQuery-ui
 - travis for continuous integration
 #### Click on the link below to build your today
-[My Funko Pop](https://funky-funkos.herokuapp.com/)
+DEPLOYED APPLICATION => [My Funko Pop](https://funky-funkos.herokuapp.com/)
