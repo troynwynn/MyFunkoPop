@@ -1,4 +1,6 @@
 ## Design your own Funko Pop
+
+![homepage](siteImg/demoImg02.png)
 ## My Funko Pop is a "build your own" site centered around your favorite collectables 
 - Users can manipulate the Head, Body, and legs of their favorite Funko Pops
 - Enjoy full control over your Funko with drag, drop and placement features
@@ -10,6 +12,8 @@
 - Achievement system though a trophy room
 - Game logic to recognize when you matched the original builds 
 - Free movement using draggable widget
+
+![customFunkoPop](siteImg/demoImg01.png)
 ### My Funko Pop uses
 - mysql
 - express
@@ -18,5 +22,8 @@
 - path
 - jQuery-ui
 - travis for continuous integration
+
+![customFunkoPop](siteImg/demoImg03.png)
+
 #### Click on the link below to build your today
 [My Funko Pop](https://funky-funkos.herokuapp.com/)
